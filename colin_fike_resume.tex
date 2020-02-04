@@ -1,0 +1,169 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://colinfike.github.io/}{\Large Colin Fike}} & Email : \href{mailto:colin.fike@gmail.com}{colin.fike@gmail.com}\\
+  \href{https://colinfike.github.io/}{https://colinfike.github.io/} & Mobile : +1-716-523-8130 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University at Buffalo, SUNY}{Buffalo, NY}
+      {Bachelor of Science in Computer Science;  GPA: 3.582 }{Fall. 2010 -- Dec. 2014}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Dictionary.com}{San Francisco, CA}
+      {Backend Engineer}{July 2018 - December 2019}
+      \resumeItemListStart
+        \resumeItem{Fastly Custom VCL}
+          {Wrote and was responsible for custom VCL that controlled CDN logic for 12 properties handling {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second at peak traffic. Tune cache key function and vary header functionality to achieve a {\raise.17ex\hbox{$\scriptstyle\sim$}}90\% hit rate on main properties despite legacy restrictions.}
+        \resumeItem{Backend Content APIs}
+          {Created and maintained existing Node APIs that serve dictionary/thesaurus content to front end applications at average rates of 100-200 requests per second each at peak traffic. Implemented a stop gap mobile API by manipulating legacy data sources and formatting responses to include inline formatting/markup to enable complete migration off legacy PHP monolith.}
+        \resumeItem{Command Line Tools}
+          {Created command line tool to whitelist only Fastly edge node IPs in application load balancers to ensure the CDN layer could not be bypassed. Wrote a command line tool to create new sitemaps based on data pulled from latest database dump for use on main properties.}
+        \resumeItem{AWS Infrastructure}
+          {Maintained and created assorted pieces of infrastructure on AWS including ElasticSearch/Kibana clusters, Lambdas, Elastic Beanstalks, S3 buckets, Fargate tasks, CloudWatch logging, Route 53, VPC, CloudFormation templates, Kinesis, and others. }
+         \resumeItem{CI/CD Pipelines}
+          {Created and maintained CI/CD pipelines using Gitlab CI Runners to build and test production Docker images that were uploaded to AWS ECR and deployed to Elastic Beanstalks. Created and maintained Dockerfiles used to build and run production applications.}
+         \resumeItem{Content Ingestion Pipeline}
+          {Designed and created an updated content ingestion pipeline to import multiple independent XML data sources into a common graph format in RedisGraph via Cypher before being exported into ElasticSearch for serving. Create Docker images to faciliate running of new pipeline.}
+         \resumeItem{Header Bidding}
+          {Created front end package to enable header bidding with Pubmatic/A9 via Google DFP first price bidder system. Write lambdas for real time markup of bid prices returned from ad exchanges based on user/placement data and to provide floored bids in situations where no bids were made by ad exchanges.   }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Chewse}{San Francisco, CA}
+      {Full Stack Engineer}{May 2017 - March 2018}
+      \resumeItemListStart
+        \resumeItem{Self-Service Prix Fixe Meal Checkout}
+          {Implemented new checkout flow that enables users to browse, schedule, and purchase a meal without having to go through customer support. Reduce time to schedule a meal from a day or more to several minutes.}
+        \resumeItem{Client Facing Frontend/Backend Redesign}
+          {Implement new meal calendar, adhoc order requests, dynamic feedback forms, and other pages in new framework, Vue.js. Create/Update APIs to support new frontend functionality. Streamline frontend and reduce load time for clients to see scheduled meals by 75\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mainstreet Computing}{Buffalo, NY}
+      {Senior Software Engineer}{Fall 2014 - February 2017}
+      \resumeItemListStart
+        \resumeItem{Insurance Application Processing Proxy}
+          {Lead development of proxy service that consumed an insurance application payload in JSON format, dynamically navigated the Healthcare.gov application, and saved the result of the application in PDF format using Ruby on Rails.}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{YougoPremium}
+      {Command line tool written in Go used to subscribe to Youtube channels and download latest videos since the last download to your local machine for offline playback.}
+    \resumeSubItem{JudgeGo}
+      {Personal Discord bot written in Go with functionality to create sound clips from youtube videos, sound clip playback via voice channels, markov chain and sentence generation from user message history, and minor moderation functionality.}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}
+      {Javascript, Go, VCL, Python, Ruby, SQL, CSS/HTML, Java/C++ (Working Knowledge)}
+    \resumeSubItem{Technologies}
+      {Docker, Fastly, AWS, Mongo, Redis, Cypher, React, Heroku, NGINX, Unix }
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+% \resumeSubHeadingListStart
+%   \item{
+%    \textbf{Languages}{: Javascript, Go, Python, Ruby, SQL, CSS/HTML}
+%    \hfill
+%    \textbf{Technologies}{: Docker, AWS, Mongo, Cypher, React, Heroku, Apache }
+%}
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
