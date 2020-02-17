@@ -101,14 +101,14 @@
           {Wrote and was responsible for custom VCL that controlled CDN logic for 12 properties handling {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second at peak traffic. Tune cache key function and vary header functionality to achieve a {\raise.17ex\hbox{$\scriptstyle\sim$}}90\% hit rate on main properties despite legacy restrictions.}
         \resumeItem{Backend Content APIs}
           {Created and maintained existing Node APIs that serve dictionary/thesaurus content to front end applications at average rates of 100-200 requests per second each at peak traffic. Implemented a stop gap mobile API by manipulating legacy data sources and formatting responses to include inline formatting/markup to enable complete migration off legacy PHP monolith.}
-        \resumeItem{Command Line Tools}
-          {Created command line tool to whitelist only Fastly edge node IPs in application load balancers to ensure the CDN layer could not be bypassed. Wrote a command line tool to create new sitemaps based on data pulled from latest database dump for use on main properties.}
-        \resumeItem{AWS Infrastructure}
+         \resumeItem{AWS Infrastructure}
           {Maintained and created assorted pieces of infrastructure on AWS including ElasticSearch/Kibana clusters, EC2, Lambdas, Elastic Beanstalks, S3 buckets, Fargate tasks, CloudWatch logging, Route 53, VPC, CloudFormation templates, Kinesis, and others. }
          \resumeItem{CI/CD Pipelines}
           {Created and maintained CI/CD pipelines using Gitlab CI Runners to build and test production Docker images that were uploaded to AWS ECR and deployed to Elastic Beanstalks. Created and maintained Dockerfiles used to build and run production applications.}
          \resumeItem{Content Ingestion Pipeline}
           {Designed and created an updated content ingestion pipeline to import multiple independent XML data sources into a common graph format in RedisGraph via Cypher before being exported into ElasticSearch for serving. Create Docker images to facilitate running of new pipeline.}
+         \resumeItem{MongoDB Clusters}
+          {Managed MongoDB clusters that provided thesaurus and dictionary data to backend APIs. Processed greylist/whitelist across MongoDB cluster holding {\raise.17ex\hbox{$\scriptstyle\sim$}}19 million example sentences and restored to production in zero downtime deployment. }
          \resumeItem{Header Bidding}
           {Created front end package to enable header bidding with Pubmatic/A9 via Google DFP first price bidder system. Write lambdas for real time markup of bid prices returned from ad exchanges based on user/placement data and to provide floored bids in situations where no bids were made by ad exchanges.   }
       \resumeItemListEnd
@@ -150,7 +150,7 @@
     \resumeSubItem{Languages}
       {Javascript, Go, VCL, Python, Ruby, SQL, CSS/HTML, Java/C++ (Working Knowledge)}
     \resumeSubItem{Technologies}
-      {Docker, Fastly, AWS, Mongo, Redis, Cypher, React, Heroku, NGINX, Unix }
+      {Docker, Fastly, AWS, Mongo, Redis, Cypher, React, Heroku, ElasticSearch, Kibana, Unix }
   \resumeSubHeadingListEnd
 
 %
