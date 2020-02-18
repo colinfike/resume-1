@@ -100,17 +100,17 @@
         \resumeItem{Fastly Custom VCL}
           {Wrote and was responsible for custom VCL that controlled CDN logic for 12 properties handling {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second at peak traffic. Tune cache key function and vary header functionality to achieve a {\raise.17ex\hbox{$\scriptstyle\sim$}}90\% hit rate on main properties despite legacy restrictions.}
         \resumeItem{Backend Content APIs}
-          {Created and maintained existing Node APIs that serve dictionary/thesaurus content to front end applications at average rates of 100-200 requests per second each at peak traffic. Implemented a stop gap mobile API by manipulating legacy data sources and formatting responses to include inline formatting/markup to enable complete migration off legacy PHP monolith.}
+          {Created Node APIs that serve dictionary/thesaurus content to front end applications at average rates of 100-200 requests per second each at peak traffic. Implemented a stop gap mobile API by manipulating legacy data sources and formatting API responses to include inline formatting/markup to enable complete migration off legacy PHP monolith and support the legacy mobile application.}
+         \resumeItem{Content Ingestion Pipeline into RedisGraph}
+          {Designed and created an ingestion pipeline to import multiple independent XML data sources into a common graph format in RedisGraph via Cypher. Enable processing on hundreds of thousands of connected nodes before being exported into ElasticSearch. }
          \resumeItem{AWS Infrastructure}
-          {Maintained and created assorted pieces of infrastructure on AWS including ElasticSearch/Kibana clusters, EC2, Lambdas, Elastic Beanstalks, S3 buckets, Fargate tasks, CloudWatch logging, Route 53, VPC, CloudFormation templates, Kinesis, and others. }
+          {Maintained and created the infrastructure on AWS including Elastic Beanstalks, Application Load Balancers, VPC, EC2, CloudWatch, Route 53, ElasticSearch/Kibana clusters, Lambdas, S3, Fargate, Kinesis, and others. Migrated to Terraform to simplify creating new and maintaining old infrastructure. On call for production issues across stack. }
+         \resumeItem{Header Bidding}
+          {Created front end package to enable header bidding with Pubmatic/A9 via Google DFP first price bidder system. Write sub-15ms latency lambdas for real time markup of bid prices returned from ad exchanges based on placement data and to provide floored bids in situations where no bids were made by ad exchanges. }
          \resumeItem{CI/CD Pipelines}
-          {Created and maintained CI/CD pipelines using Gitlab CI Runners to build and test production Docker images that were uploaded to AWS ECR and deployed to Elastic Beanstalks. Created and maintained Dockerfiles used to build and run production applications.}
-         \resumeItem{Content Ingestion Pipeline}
-          {Designed and created an updated content ingestion pipeline to import multiple independent XML data sources into a common graph format in RedisGraph via Cypher before being exported into ElasticSearch for serving. Create Docker images to facilitate running of new pipeline.}
+          {Created and maintained CI/CD pipelines using Gitlab CI Runners to build and test production Docker images that were uploaded to AWS ECR and deployed to Elastic Beanstalks. Enabled ability to deploy code within minutes of it being merged into master.}
          \resumeItem{MongoDB Clusters}
           {Managed MongoDB clusters that provided thesaurus and dictionary data to backend APIs. Processed greylist/whitelist across MongoDB cluster holding {\raise.17ex\hbox{$\scriptstyle\sim$}}19 million example sentences and restored to production in zero downtime deployment. }
-         \resumeItem{Header Bidding}
-          {Created front end package to enable header bidding with Pubmatic/A9 via Google DFP first price bidder system. Write lambdas for real time markup of bid prices returned from ad exchanges based on user/placement data and to provide floored bids in situations where no bids were made by ad exchanges.   }
       \resumeItemListEnd
 
     \resumeSubheading
@@ -141,16 +141,16 @@
     \resumeSubItem{YougoPremium}
       {Command line tool written in Go used to subscribe to YouTube channels and download latest videos since the last download to your local machine for offline playback.}
     \resumeSubItem{JudgeGo}
-      {Personal Discord bot written in Go with functionality to create sound clips from YouTube videos, sound clip playback via voice channels, Markov chain and sentence generation from user message history, and minor moderation functionality.}
+      {Personal Discord bot written in Go with functionality to create sound clips from YouTube videos, sound clip playback via voice channels, Markov chain and sentence generation from user message history, and moderate channels.}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Languages}
-      {Javascript, Go, VCL, Python, Ruby, SQL, CSS/HTML, Java/C++ (Working Knowledge)}
+      {Node.js, Go, VCL, Python, Ruby, SQL, CSS/HTML, Java/C++ (Working Knowledge)}
     \resumeSubItem{Technologies}
-      {Docker, Fastly, AWS, Mongo, Redis, Cypher, React, Heroku, ElasticSearch, Kibana, Unix }
+      {Docker, Fastly, AWS, MongoDB, Redis, Terraform, React, Heroku, ElasticSearch, Kibana, Unix }
   \resumeSubHeadingListEnd
 
 %
