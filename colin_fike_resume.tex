@@ -23,6 +23,8 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -89,19 +91,23 @@
       {Backend Engineer}{July 2018 - December 2019}
       \resumeItemListStart
         \resumeItem{Fastly Custom VCL}
-          {Wrote and was responsible for custom VCL that controlled CDN logic for 12 properties handling {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second at peak traffic. Tune cache key function and vary header functionality to achieve a {\raise.17ex\hbox{$\scriptstyle\sim$}}90\% hit rate on main properties despite legacy restrictions.}
-        \resumeItem{Backend Content APIs}
-          {Created Node APIs that serve dictionary/thesaurus content to front end applications at average rates of 100-200 requests per second each at peak traffic. Implemented a stop gap mobile API by manipulating legacy data sources and formatting API responses to include inline formatting/markup to enable complete migration off legacy PHP monolith and support the legacy mobile application.}
-         \resumeItem{Content Ingestion Pipeline into RedisGraph}
-          {Designed and created an ingestion pipeline to import multiple independent XML data sources into a common graph format in RedisGraph via Cypher. Enable processing on hundreds of thousands of connected nodes before being exported into ElasticSearch. }
+          {Achieved a 85-90\% hit rate across 12 properties receiving {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second using custom VCL to route/cache all requests.}
+        %\resumeItem{Lexicographical Content APIs}
+         % {Created/maintained Node.js APIs that serve lexicographical content to front end applications at rates of 100-200 requests per second while minimizing infrastructural overhead.}
+         \resumeItem{Mobile API}
+          {Implement a mobile API serving 100-200 requests per second by manipulating legacy data sources and reverse engineering legacy markup/formatting to enable complete migration off legacy PHP monolith.}
+         \resumeItem{Content Ingestion Pipeline}
+          {Design/Implement a pipeline to transform independent XML sources into a common graph form resulting in ability to publish new dictionary content and generate data relationships. }
          \resumeItem{AWS Infrastructure}
-          {Maintained and created the infrastructure on AWS including Elastic Beanstalks, Application Load Balancers, VPC, EC2, CloudWatch, Route 53, ElasticSearch/Kibana clusters, Lambdas, S3, Fargate, Kinesis, and others. Migrated to Terraform to simplify creating new and maintaining old infrastructure. On call for production issues across stack. }
+          {Maintained and created the infrastructure on AWS including Elastic Beanstalks, CloudWatch, Lambdas, Kinesis, and others. Optimized operational costs and availability via auto scaling tuning.}
          \resumeItem{Header Bidding}
-          {Created front end package to enable header bidding with Pubmatic/A9 via Google DFP first price bidder system. Write sub-15ms latency lambdas for real time markup of bid prices returned from ad exchanges based on placement data and to provide floored bids in situations where no bids were made by ad exchanges. }
+          {Created package to enable header bidding with Pubmatic via new Google first price bidder to maintain existing ad revenue. Wrote low latency code for real time markup of bids to optimize ad revenue.}
          \resumeItem{CI/CD Pipelines}
-          {Created and maintained CI/CD pipelines using Gitlab CI Runners to build and test production Docker images that were uploaded to AWS ECR and deployed to Elastic Beanstalks. Enabled ability to deploy code within minutes of it being merged into master.}
+          {Utilized Docker image caching and mirroring to enable ability to test/deploy code within minutes via Gitlab CI Runners building production Docker images for deploy to Elastic Beanstalks.}
          \resumeItem{MongoDB Clusters}
-          {Managed MongoDB clusters that provided thesaurus and dictionary data to backend APIs. Processed greylist/whitelist across MongoDB cluster holding {\raise.17ex\hbox{$\scriptstyle\sim$}}19 million example sentences and restored to production in zero downtime deployment. }
+          {Managed clusters that provided thesaurus and dictionary data to APIs. Processed greylist/whitelist on {\raise.17ex\hbox{$\scriptstyle\sim$}}19 million example sentences and restored to production in zero downtime deployment. }
+         \resumeItem{Mentorship}
+          {Mentor less experienced coworkers via pair programming, peer code review, and presentations.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -109,7 +115,7 @@
       {Full Stack Engineer}{May 2017 - March 2018}
       \resumeItemListStart
         \resumeItem{Self-Service Prix Fixe Meal Checkout}
-          {Implemented new checkout flow that enables users to browse, schedule, and purchase a meal without having to go through customer support. Reduce time to schedule a meal from a day or more to several minutes.}
+          {Implemented new checkout flow that enables users to browse, schedule, and purchase a meal without having to go through customer support with Django/Vue.js. Reduce time to schedule a meal from a day or more to several minutes.}
         \resumeItem{Client Facing Frontend/Backend Redesign}
           {Implement new meal calendar, adhoc order requests, dynamic feedback forms, and other pages in new framework, Vue.js. Create/Update APIs to support new frontend functionality. Streamline frontend and reduce load time for clients to see scheduled meals by 75\%.}
       \resumeItemListEnd
@@ -120,6 +126,8 @@
       \resumeItemListStart
         \resumeItem{Insurance Application Processing Proxy}
           {Lead development of proxy service that consumed an insurance application payload in JSON format, dynamically navigated the Healthcare.gov application, and saved the result of the application in PDF format using Ruby on Rails.}
+        \resumeItem{Creative Manager and Live Editor}
+          {Lead development of web app allowing clients to create campaigns and creative ad units that could be previewed and have assets modified on the fly through scoping, tasking, and programming roles using Ruby on Rails and Javascript.}
       \resumeItemListEnd
 
 
@@ -146,9 +154,9 @@
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Languages}
-      {Node.js, Go, VCL, Python, Ruby, SQL, CSS/HTML, Java/C++ (Working Knowledge)}
+      {Node.js, Go, VCL, Python/Django, Ruby/Rails, SQL, CSS/HTML}
     \resumeSubItem{Technologies}
-      {Docker, Fastly, AWS, MongoDB, Redis, Terraform, React, Heroku, ElasticSearch, Kibana, Unix }
+      {Docker, Fastly, AWS, MongoDB, Redis, Terraform, React, Heroku, ElasticSearch/Kibana, Unix }
   \resumeSubHeadingListEnd
 
 %
