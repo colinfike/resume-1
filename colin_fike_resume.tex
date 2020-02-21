@@ -90,22 +90,22 @@
       {Dictionary.com}{San Francisco, CA}
       {Backend Engineer}{July 2018 - December 2019}
       \resumeItemListStart
-        \resumeItem{Fastly Custom VCL}
-          {Achieved a 85-90\% hit rate across 12 properties receiving {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second using custom VCL to route/cache all requests.}
         %\resumeItem{Lexicographical Content APIs}
          % {Created/maintained Node.js APIs that serve lexicographical content to front end applications at rates of 100-200 requests per second while minimizing infrastructural overhead.}
          \resumeItem{Mobile API}
           {Implement a mobile API serving 100-200 requests per second by manipulating legacy data sources and reverse engineering legacy markup/formatting to enable complete migration off legacy PHP monolith.}
          \resumeItem{Content Ingestion Pipeline}
           {Design/Implement a pipeline to transform independent XML sources into a common graph form resulting in ability to publish new dictionary content and generate data relationships. }
-         \resumeItem{AWS Infrastructure}
+         \resumeItem{Fastly Custom VCL}
+          {Achieved a 85-90\% hit rate across 12 properties receiving {\raise.17ex\hbox{$\scriptstyle\sim$}}4000 requests per second using custom VCL to route/cache all requests. Owner of all Fastly configurations.}
+          \resumeItem{AWS Infrastructure}
           {Maintained and created the infrastructure on AWS including Elastic Beanstalks, CloudWatch, Lambdas, Kinesis, and others. Optimized operational costs and availability via auto scaling tuning.}
          \resumeItem{Header Bidding}
           {Created package to enable header bidding with Pubmatic via new Google first price bidder to maintain existing ad revenue. Wrote low latency code for real time markup of bids to optimize ad revenue.}
          \resumeItem{CI/CD Pipelines}
           {Utilized Docker image caching and mirroring to enable ability to test/deploy code within minutes via Gitlab CI Runners building production Docker images for deploy to Elastic Beanstalks.}
          \resumeItem{MongoDB Clusters}
-          {Managed clusters that provided thesaurus and dictionary data to APIs. Processed greylist/whitelist on {\raise.17ex\hbox{$\scriptstyle\sim$}}19 million example sentences and restored to production in zero downtime deployment. }
+          {Processed greylist/whitelist on {\raise.17ex\hbox{$\scriptstyle\sim$}}19 million example sentences and restored to production in zero downtime deployment. Managed clusters that provided thesaurus and dictionary data to APIs.}
          \resumeItem{Mentorship}
           {Mentor less experienced coworkers via pair programming, peer code review, and presentations.}
       \resumeItemListEnd
@@ -144,9 +144,9 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{YougoPremium}
+    \resumeSubItem{\href{https://github.com/colinfike/yougo-premium}{YougoPremium}}
       {Command line tool written in Go used to subscribe to YouTube channels and download latest videos since the last download to your local machine for offline playback.}
-    \resumeSubItem{JudgeGo}
+    \resumeSubItem{\href{https://github.com/colinfike/judgego}{JudgeGo}}
       {Personal Discord bot written in Go with functionality to create sound clips from YouTube videos, sound clip playback via voice channels, Markov chain and sentence generation from user message history, and moderate channels.}
   \resumeSubHeadingListEnd
 
